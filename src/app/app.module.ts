@@ -7,6 +7,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
 import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
+import { FormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 import { AnpracComponent } from './anprac/anprac.component';
 
 @NgModule({
@@ -19,6 +25,11 @@ import { AnpracComponent } from './anprac/anprac.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatCheckboxModule,
+    MatInputModule,
+    MatCardModule,
+    FormsModule,
+    MatSnackBarModule,
     HttpClientModule
   ],
   providers: [],

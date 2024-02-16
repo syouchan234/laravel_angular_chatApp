@@ -1,26 +1,20 @@
-<p>anprac works!</p>
 <h1>laravelAPIリスト</h1>
 <ul>
-    <!-- <div>id</div><br>
-    <button mat-raised-button *ngFor="let todo of todos">
-        {{ todo.id }}
-    </button>
-    <div>タイトル</div><br>
-    <button mat-raised-button *ngFor="let todo of todos">
-        {{ todo.title }}
-    </button>
-    <div>作成日</div><br>
-    <button mat-raised-button *ngFor="let todo of todos">
-        {{ todo.created_at }}
-    </button>
-    <div>更新日</div><br>
-    <button mat-raised-button *ngFor="let todo of todos">
-        {{ todo.updated_at }}
-    </button> -->
-    <!-- <button mat-raised-button *ngFor="let todo of todos">
-        id:{{ todo.id }} title:{{ todo.title }} 作成日:{{ todo.created_at }} 更新日:{{ todo.updated_at }}
-    </button> -->
-    <button mat-raised-button *ngFor="let todo of todos">
-        ID:{{ todo.id }} 名前:{{ todo.title }}
-    </button>
+    <button mat-raised-button>タスクの追加</button>
+    <div *ngFor="let todo of todos">
+        <mat-card>
+            <mat-card-content>タイトル:{{ todo.title }}</mat-card-content>
+            <div>
+                <mat-form-field>
+                    <input matInput [(ngModel)]="todo.putTitle">
+                </mat-form-field>
+                <button mat-raised-button (click)="updateBtn(todo.id,todo.putTitle)">更新</button>
+            </div>
+            <div *ngFor="let detail of todo.to_do_details">
+                <mat-checkbox>{{detail.name}}</mat-checkbox>
+                <button mat-raised-button>編集</button>
+            </div>
+        </mat-card>
+        <br>
+    </div>
 </ul>
