@@ -14,11 +14,13 @@ import { FormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { AnpracComponent } from './anprac/anprac.component';
+import { AddDialogComponentComponent } from './dialog/add-dialog-component/add-dialog-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AnpracComponent,
+    AddDialogComponentComponent,
   ],
   imports: [
     BrowserModule,
