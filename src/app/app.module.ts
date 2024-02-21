@@ -15,12 +15,16 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { AnpracComponent } from './anprac/anprac.component';
 import { AddDialogComponentComponent } from './dialog/add-dialog-component/add-dialog-component.component';
+import { LoginComponent } from './login/login.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AnpracComponent,
     AddDialogComponentComponent,
+    LoginComponent,
+    CreateAccountComponent,
   ],
   imports: [
     BrowserModule,

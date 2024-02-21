@@ -1,20 +1,18 @@
 <h1>laravelAPIリスト</h1>
 <ul>
-    <button mat-raised-button>タスクの追加</button>
-    <div *ngFor="let todo of todos">
-        <mat-card>
-            <mat-card-content>タイトル:{{ todo.title }}</mat-card-content>
-            <div>
-                <mat-form-field>
-                    <input matInput [(ngModel)]="todo.putTitle">
-                </mat-form-field>
-                <button mat-raised-button (click)="updateBtn(todo.id,todo.putTitle)">更新</button>
-            </div>
-            <div *ngFor="let detail of todo.to_do_details">
-                <mat-checkbox>{{detail.name}}</mat-checkbox>
-                <button mat-raised-button>編集</button>
-            </div>
-        </mat-card>
-        <br>
-    </div>
+  <button mat-raised-button (click)="addTask()">タスクの追加</button>
+  <div *ngFor="let todo of todos">
+    <mat-card>
+      <mat-card-content>
+        タイトル: {{ todo.title }}
+      </mat-card-content>
+      <div>
+        <mat-form-field>
+          <input matInput [(ngModel)]="todo.putTitle">
+        </mat-form-field>
+        <button mat-raised-button (click)="updateBtn(todo.id)">更新</button>
+      </div>
+    </mat-card>
+    <br>
+  </div>
 </ul>

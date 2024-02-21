@@ -1,0 +1,23 @@
+<div>sampleLogin</div>
+<div>email:test@examle.com</div>
+<div>password:password</div>
+  <!-- <div class="koizumiImgContainer">
+    <img src="assets/img/koizumi.png" alt="Sample Image" class="koizumiImg">
+  </div> -->
+<div class="login-container">
+    <mat-card class="login-card">
+      <div class="login-form">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Email" [(ngModel)]="email">
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput type="password" placeholder="Password" [(ngModel)]="password">
+        </mat-form-field>
+        <button mat-raised-button color="primary" class="full-width" (click)="login()">ログイン</button>
+        <!-- <button mat-raised-button class="full-width" (click)="logout()">ログアウト</button> -->
+        <button mat-raised-button class="full-width" (click)="createAccountPageTo()">アカウント作成</button>
+      </div>
+    </mat-card>
+</div>
+<div>test</div>
+  
