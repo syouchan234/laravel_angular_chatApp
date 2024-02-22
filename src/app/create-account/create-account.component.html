@@ -1,28 +1,32 @@
-<!-- <div>sampleLogin</div>
-<div>email:test@examle.com</div>
-<div>password:password</div> -->
-  <!-- <div class="koizumiImgContainer">
-    <img src="assets/img/koizumi.png" alt="Sample Image" class="koizumiImg">
-  </div> -->
-  <div class="login-container">
+<div class="login-container">
     <mat-card class="login-card">
-      <div class="login-form">
-        <mat-form-field class="full-width">
-            <input matInput placeholder="name">
-        </mat-form-field>
-        <mat-form-field class="full-width">
-            <input matInput placeholder="account_name">
-        </mat-form-field>
-        <mat-form-field class="full-width">
-          <input matInput placeholder="Email">
-        </mat-form-field>
-        <mat-form-field class="full-width">
-          <input matInput type="password" placeholder="Password">
-        </mat-form-field>
-        <button mat-raised-button color="primary" class="full-width">アカウント作成</button>
-        <button mat-raised-button class="full-width" (click)="autoRouter('/')">戻る</button>
-      </div>
+        <div class="login-form">
+            <mat-form-field class="full-width">
+                <input matInput placeholder="name" [(ngModel)]="name">
+            </mat-form-field>
+            <mat-form-field class="full-width">
+                <input matInput placeholder="account_name" [(ngModel)]="account_name">
+            </mat-form-field>
+            <mat-form-field class="full-width">
+                <input matInput placeholder="Email" [(ngModel)]="email">
+            </mat-form-field>
+            <mat-form-field class="full-width">
+                <input matInput type="password" placeholder="Password" [(ngModel)]="password">
+            </mat-form-field>
+            <button 
+                mat-raised-button 
+                color="primary" 
+                class="full-width" 
+                (click)="createAccount()">
+                アカウント作成
+            </button>
+            <button 
+                mat-raised-button 
+                class="full-width" 
+                (click)="autoRouter('/')">
+                戻る
+            </button>
+        </div>
     </mat-card>
 </div>
 <div>test</div>
-  

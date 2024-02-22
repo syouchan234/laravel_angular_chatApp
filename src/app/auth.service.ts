@@ -44,6 +44,17 @@ export class AuthService {
       );
   }
 
+  createAccount(name:string,account_name:string,email:string,password:string){
+        // ログインAPIにリクエストを送信
+        this.http.post<any>('http://localhost/api/createUser', { name,account_name,email, password })
+        .subscribe(response => {
+          // レスポンスからトークンを取得
+          this.token = response.token;
+          this.loggedIn = true;
+          this.router.navigate(['home']);
+        });
+  }
+
   isLoggedIn(): boolean {
     return this.loggedIn;
   }

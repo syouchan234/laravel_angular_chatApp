@@ -17,6 +17,10 @@ export class CreateAccountComponent {
     email: string = "";//test@examle.com
     password: string = "";//password
 
+    createAccount(){
+      this.authService.createAccount(this.name,this.account_name,this.email, this.password);
+    }
+
     autoRouter(route: string){
       this.router.navigate([route]);
     }
